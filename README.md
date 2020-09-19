@@ -1,8 +1,8 @@
 ## seleniumwd-java-studyhall
 
+Project used for studying and playing around with SeleniumWd+Java.
 
-
-SetUp: 
+### SetUp: 
 
 [Java](https://www.oracle.com/java/technologies/javase-downloads.html)
 
@@ -15,7 +15,7 @@ SetUp:
 [Maven Repository for Selenium Chrome Driver](https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver/3.141.59)
 
 
-Resources/Links: 
+### Resources/Links: 
 
 [org.openqa.selenium - Interface WebDriver]( seleniumhq.github.io/seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/WebDriver.html)
 
