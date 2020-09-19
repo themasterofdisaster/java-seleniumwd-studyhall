@@ -18,3 +18,5 @@ SetUp:
 Resources/Links: 
 
 [org.openqa.selenium - Interface WebDriver]( seleniumhq.github.io/seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/WebDriver.html)
+
+Website to use for testing: [https://the-internet.herokuapp.com/](https://the-internet.herokuapp.com/)
