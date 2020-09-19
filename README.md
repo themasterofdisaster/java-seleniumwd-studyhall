@@ -1,4 +1,4 @@
-## SeleniumWD + Java Study Hall
+## seleniumwd-java-studyhall
 
 
 
