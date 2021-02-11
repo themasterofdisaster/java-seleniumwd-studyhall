@@ -5,8 +5,8 @@
         The dataProvider attribute connects the @DataProvider annotation to the test method.
 
         The dataProviderClass attribute allows us to separate the test method and data provider into different classes.
-            If putting the dataProvider in a separate class, make sure to make it "public static"
-            ie:      public Object [] [] logInData () {}
+            If putting the dataProvider in a separate class, make sure to make the data provider class "static"
+            ie:      public static Object [] [] logInData () {}
 
         Source: https://testautomationu.applitools.com/introduction-to-testng
  */
