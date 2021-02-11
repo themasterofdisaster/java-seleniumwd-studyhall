@@ -53,14 +53,14 @@ public class DDTAndDataProvider
 
     //You can give the @DataProvider a name or not. It is optional. If you choose not to use a name, then simply use
     //the class name in @Test's dataProvider attribute.
-    @org.testng.annotations.DataProvider(name = "login-provider")
+    @DataProvider (name = "login-provider")
     public Object [] [] logInData ()
     {
         Object [] [] data = new Object [3] [3];
 
-        data [0] [0] = "TestNG@Framework.com";		data [0] [1] = "TestNG1234";			data [0] [2] = true;
-        data [1] [0] = "Joe@Doe.com";							data [1] [1] = "DoeDoe34";			data [1] [2] = false;
-        data [2] [0] = "Test@AutomationU.com";			data [2] [1] = "TAU1234";				data [2] [2] = true;
+        data [0] [0] = "TestNG@Framework.com";		data [0] [1] = "TestNG1234";		data [0] [2] = true;
+        data [1] [0] = "Joe@Doe.com";				data [1] [1] = "DoeDoe34";			data [1] [2] = false;
+        data [2] [0] = "Test@AutomationU.com";		data [2] [1] = "TAU1234";			data [2] [2] = true;
 
         return data;
     }
