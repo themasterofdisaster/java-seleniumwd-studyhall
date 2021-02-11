@@ -15,3 +15,5 @@
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Test Suite -->
+
+<!-- XML files can be used to run tests. Other ways of running tests are  via command line or Ant.-->
