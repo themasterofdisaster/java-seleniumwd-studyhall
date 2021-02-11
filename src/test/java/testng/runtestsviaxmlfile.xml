@@ -7,6 +7,9 @@
                 <methods>
                     <include name = "searchCustomer"/>
                     <include name = "searchProduct"/>
+
+                    <!-- You can also indicate which tests to exclude from the test execution -->
+                    <exclude name = "regression"/>
                 </methods>
             </class>
         </classes>

@@ -1,44 +1,27 @@
 /*
-    Dependency Testing
+    Dependency Testing and Test Groups
 
-        So what exactly is dependency testing? Dependency testing is when two or more actions, two or more tasks,
-        or two or more functions depend on the order of their methods. We must sign into an application before we can
-        test sign out. The sign out test depends on the sign in being successful.
-
-        In a scenario where Dependency Testing is not handled correctly, if the test on which other tests depend on fails,
-        then all other tests will be also marked as failed. This is not a correct reflection of the actual test results,
-        since the tests don't even get to run.
-
-        In a scenario where Dependency Testing is handled correctly, if the test in which other tests depend on fails,
-        then all other tests which had a dependency will be marked as "skipped" and not as failed. This will reflect the
-        actual results more accurately since the tests did not get to run.
-
-        TestNG provides these attributes to be used with Dependency Testing:
-            - dependsOn
-            - groups
-            - dependsOnGroups
-
-        Source: https://testautomationu.applitools.com/introduction-to-testng/chapter7.1.html
-
+        Groups is an attribute within the @Test annotation. With groups attribute you can indicate a group name you
+        want to assign the test to. This will help you organize your tests. This way you can have a "regression" group
+        or a "smoke test" group, and run any of this tests groups by using the assigned name.
  */
 
 package testng;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
-import org.testng.annotations.Test;
+        import org.openqa.selenium.By;
+        import org.openqa.selenium.WebDriver;
+        import org.openqa.selenium.WebElement;
+        import org.openqa.selenium.chrome.ChromeDriver;
+        import org.testng.Assert;
+        import org.testng.annotations.Test;
 
-//import com.testautomationu.utility.Highlighter;
+        //import com.testautomationu.utility.Highlighter;
 
-
-public class DependencyTesting {
-
+public class DependencyTestingTestGroups
+{
     WebDriver driver;
 
-    @Test
+    @Test (groups = "initialize")
     public void test1_SetUpChrome ()
     {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\Rex Allen Jones II\\Downloads\\Drivers\\chromedriver.exe");
@@ -48,8 +31,7 @@ public class DependencyTesting {
         System.out.println("1. Set Up Chrome");
     }
 
-    //here we add dependsOnMethods attribute to indicate we have a dependency on method test1_SetUpChrome
-    @Test (dependsOnMethods = "test1_SetUpChrome")
+    @Test (dependsOnGroups = "initialize", groups = "env_application")
     public void test2_OpenOrangeHRM ()
     {
         driver.get("https://opensource-demo.orangehrmlive1234.com/");
@@ -58,11 +40,11 @@ public class DependencyTesting {
         System.out.println("2. Open OrangeHRM");
     }
 
-    @Test (dependsOnMethods = "test2_OpenOrangeHRM")
+    @Test  (dependsOnGroups = "env_application")
     public void test3_SignIn ()
     {
         WebElement textUsername = driver.findElement(By.id("txtUsername"));
-        //Highlighter.highlightElement(driver, textUsername);
+       //Highlighter.highlightElement(driver, textUsername);
         textUsername.sendKeys("Admin");
 
         WebElement textPassword = driver.findElement(By.id("txtPassword"));
@@ -76,7 +58,7 @@ public class DependencyTesting {
         System.out.println("3. Sign In");
     }
 
-    @Test (dependsOnMethods = "test3_SignIn")
+    @Test  (dependsOnGroups = "env_application")
     public void test4_SearchUser ()
     {
         WebElement menuAdmin = driver.findElement(By.id("menu_admin_viewAdminModule"));
@@ -94,8 +76,7 @@ public class DependencyTesting {
         System.out.println("4. Search For User");
     }
 
-    //This test depends on two methods being successful.
-    @Test (dependsOnMethods = { "test2_OpenOrangeHRM", "test3_SignIn" } )
+    @Test  (dependsOnGroups = "env_application")
     public void test5_SearchEmployee ()
     {
         WebElement menuPIM = driver.findElement(By.xpath("//*[@id=\"menu_pim_viewPimModule\"]/b"));
@@ -109,7 +90,7 @@ public class DependencyTesting {
         System.out.println("5. Search For Employee");
     }
 
-    @Test  (dependsOnMethods = { "test2_OpenOrangeHRM", "test3_SignIn" } )
+    @Test  (dependsOnGroups = "env_application")
     public void test6_SearchCandidate ()
     {
         WebElement menuRecruitment = driver.findElement(By.xpath("//*[@id=\"menu_recruitment_viewRecruitmentModule\"]/b"));
@@ -123,7 +104,7 @@ public class DependencyTesting {
         System.out.println("6. Search For Candidate");
     }
 
-    @Test  (dependsOnMethods = { "test2_OpenOrangeHRM", "test3_SignIn" } )
+    @Test  (dependsOnGroups = "env_application")
     public void test7_SignOut ()
     {
         WebElement linkWelcome = driver.findElement(By.id("welcome"));

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Test Automation Suite">
+    <test name="Exclude Regression Groups Test">
+        <groups>
+            <run>
+                <!-- Include the following test groups -->
+                <include name = "smoke"/>
+                <include name = "regression"/>
+
+                <!-- Exclude the following test groups -->
+                <exclude name = "failing"/>
+                <exclude name = "defects.*"/> <!-- Can use regular expressions -->
+            </run>
+        </groups>
+        <classes>
+            <!-- Proceed to enlist here as many classes as you would like to include -->
+            <class name="testng.Annotations"/>
+        </classes>
+    </test> <!-- Tests/Test groups -->
+</suite> <!-- Test Automation Suite -->
+
+
+<!--
+    Including/Excluding Test Groups
+
+        Rules:
+
+       No include + no exclude            -       All test methods are run.
+       Include name = "regression"        -       Only test methods in the "regression" group will be executed.
+       Include name = "smoke" + "system"  -       Only test methods in the "regression" OR in the "smoke" groups are executed.
+       Exclude name = "regression"        -       All test methods are run except for those in the "regression" group.
+       Include name = "regression" +
+        excludde name = "defects.*"       -       All tests methods which belong to the "regression" group AND are not included
+                                                    in the "defects.*" group will be executed. If a test is part of the
+                                                    "regression" group AND is also part of the "defects" group, will not
+                                                    be executed.
+
+-->
