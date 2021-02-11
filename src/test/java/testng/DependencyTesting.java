@@ -41,7 +41,7 @@ public class DependencyTesting {
     @Test
     public void test1_SetUpChrome ()
     {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Rex Allen Jones II\\Downloads\\Drivers\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\max\\Downloads\\Drivers\\chromedriver.exe");
         driver = new ChromeDriver ();
         driver.manage().window().maximize();
 
