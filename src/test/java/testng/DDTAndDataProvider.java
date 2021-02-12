@@ -8,6 +8,13 @@
             If putting the dataProvider in a separate class, make sure to make the data provider class "static"
             ie:      public static Object [] [] logInData () {}
 
+        Other ways to provide test data:
+            CSV File
+            Database
+            Properties File
+            Microsoft Excel
+            Hard-Coded Data
+
         Source: https://testautomationu.applitools.com/introduction-to-testng
  */
 
