@@ -1,3 +1,27 @@
+/*
+    TestNG Annotations
+
+    Preconditions:
+        - @BeforeTestSuite
+        - @BeforeTest
+        - @BeforeClass
+        - @BeforeMethod
+
+    Conditions (the actual test):
+        - @Test
+
+    Post-Conditions
+        - @AfterSuite
+        - @AfterTest
+        - @AfterClass
+        - @AfterMethod
+
+    All @Before and @After annotations are considered configuration annotations.
+
+    Sources:
+    https://testautomationu.applitools.com/introduction-to-testng/
+
+ */
 package testng;
 
 import org.testng.annotations.Test;

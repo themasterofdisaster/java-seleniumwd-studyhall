@@ -1,5 +1,5 @@
 # TestNG 
-
+TestNG is an open source automated testing framework.
 TestNG = Test Next Generation
 
 ### A List of Additional Concepts To Try/Look Into

@@ -20,7 +20,8 @@
         TestNG JUnit assert class: org.testng.AssertJUnit
         https://www.javadoc.io/doc/org.testng/testng/6.8.17/org/testng/AssertJUnit.html
 
-        Source: https://testautomationu.applitools.com/introduction-to-testng
+        Source:
+        https://testautomationu.applitools.com/introduction-to-testng
 
  */
 
@@ -71,6 +72,8 @@ public class AssertionsIntro {
 
         System.out.println("2. Sign In");
     }
+
+//Hard Asserts VS Soft Asserts
 
     //Test with Hard Asserts
     //Hard asserts stop execution after an assert fails. In the example below, if the assert1 fails, the asserts2 and 3

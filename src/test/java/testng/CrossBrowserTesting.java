@@ -24,7 +24,7 @@ public class CrossBrowserTesting
 
     @Test
     @Parameters ( {"URL", "BrowserType"} )
-    public void verifyTAU (String url, String browserType)
+    public void verifyTAU (String url, String browserType) //the parameters are passed on to the variables url and browserType
     {
         if (browserType.equalsIgnoreCase("Internet Explorer"))
         {
