@@ -28,7 +28,7 @@ public class CrossBrowserTesting
     {
         if (browserType.equalsIgnoreCase("Internet Explorer"))
         {
-            System.setProperty("webdriver.ie.driver", "C:\\Users\\Max\\Downloads\\Drivers\\IEDriverServer_Win32_2.53.1\\IEDriverServer.exe");
+            System.setProperty("webdriver.ie.driver", "C:\\Users\\max\\Downloads\\Drivers\\IEDriverServer_Win32_2.53.1\\IEDriverServer.exe");
             driver = new InternetExplorerDriver ();
         }
         else if (browserType.equalsIgnoreCase("Firefox"))
