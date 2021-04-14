@@ -10,11 +10,13 @@
 
     <!-- Let intellij know to compile our code using the appropriate java version. -->
     <properties>
-        <maven.compiler.target>1.12</maven.compiler.target>
-        <maven.compiler.source>1.12</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
     </properties>
 
-    <!-- Maven Repository for Selenium Chrome Driver
+    <!-- Maven Repository for Selenium C
+
+    Chrome Driver
     (https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver/3.141.59) -->
     <dependencies>
         <dependency>
