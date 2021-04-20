@@ -6,14 +6,22 @@
 public class HomePage {
 
     private WebDriver driver;
-    private By formAuthenticationLink = By.linkText("Form Authentication");
 
     public HomePage(WebDriver driver){
         this.driver = driver;
     }
 
-    public LoginPage clickFormAuthentication(){
-        driver.findElement(formAuthenticationLink).click();
+    public LoginPage clickFormAuthenticationLink(){
+        clickLinkByText("Form Authentication");
         return new LoginPage(driver);
+    }
+
+    public DropdownPage clickDropDownLink(){
+        clickLinkByText("Dropdown");
+        return new DropdownPage(driver);
+    }
+
+    private void clickLinkByText(String linkText){
+        driver.findElement(By.linkText(linkText)).click();
     }
 }

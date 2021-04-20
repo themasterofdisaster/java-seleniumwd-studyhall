@@ -14,9 +14,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
     </properties>
 
-    <!-- Maven Repository for Selenium C
-
-    Chrome Driver
+    <!-- Maven Repository for Selenium Chrome Driver
     (https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver/3.141.59) -->
     <dependencies>
         <dependency>
@@ -24,6 +22,15 @@
             <artifactId>selenium-chrome-driver</artifactId>
             <version>3.141.59</version>
         </dependency>
+
+        <!-- Include selenium support dependency -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-support</artifactId>
+            <version>3.141.59</version>
+        </dependency>
+
+        <!-- Include TestNG dependency -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
