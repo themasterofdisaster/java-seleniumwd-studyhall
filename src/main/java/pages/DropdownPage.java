@@ -2,7 +2,11 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class DropdownPage {
 
@@ -13,14 +17,18 @@ public class DropdownPage {
         this.driver = driver;
     }
 
-    public void selectsFromDropdown(String option){
-        Select select = new Select(driver.findElement(dropdown));
-
+    public void selectFromDropdown(String option){
+        findDropdownElement().selectByVisibleText(option);
     }
-   /*
+
+    //Returns a list of all options which are selected.
+    public List<String> getSelectedOptions(){
+        List<WebElement> selectedElements = findDropdownElement().getAllSelectedOptions();
+        return selectedElements.stream().map(e->e.getText()).collect(Collectors.toList());
+    }
+
     private Select findDropdownElement(){
         return new Select(driver.findElement(dropdown));
     }
-    */
 
 }
