@@ -12,21 +12,26 @@ public class HomePage {
     }
 
     public LoginPage clickFormAuthenticationLink(){
-        clickLinkByText("Form Authentication");
+        clickLink("Form Authentication");
         return new LoginPage(driver);
     }
 
     public DropdownPage clickDropDownLink(){
-        clickLinkByText("Dropdown");
+        clickLink("Dropdown");
         return new DropdownPage(driver);
     }
 
     public HoversPage clickHoversLink(){
-        clickLinkByText("Hovers");
+        clickLink("Hovers");
         return new HoversPage(driver);
     }
 
-    private void clickLinkByText(String linkText){
+    public KeyPressesPage clickKeyPressesPage(){
+        clickLink("Key Presses");
+        return new KeyPressesPage(driver);
+    }
+
+    private void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
     }
 }
