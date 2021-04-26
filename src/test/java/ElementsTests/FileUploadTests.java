@@ -1,0 +1,17 @@
+package ElementsTests;
+
+import base.BaseTests;
+import org.testng.annotations.Test;
+import pages.FileUploadPage;
+
+import static org.testng.Assert.assertEquals;
+
+public class FileUploadTests extends BaseTests {
+
+    @Test
+    public void testFileUpload(){
+        FileUploadPage uploadPage = homePage.clickFileUpload();
+        uploadPage.uploadFile("/Users/mmagana/devmm/seleniumwd-java-studyhall/resources/chromedriver");
+        assertEquals(uploadPage.getUploadedFiles(), "chromedriver", "Uploaded files incorrect");
+    }
+}
