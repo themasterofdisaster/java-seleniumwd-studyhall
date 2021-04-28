@@ -26,17 +26,22 @@ public class HomePage {
         return new HoversPage(driver);
     }
 
-    public KeyPressesPage clickKeyPressesPage(){
+    public KeyPressesPage clickKeyPressesLink(){
         clickLink("Key Presses");
         return new KeyPressesPage(driver);
     }
 
-    public AlertsPage clickJavaScriptAlerts(){
+    public AlertsPage clickJavaScriptAlertsLink(){
         clickLink("JavaScript Alerts");
         return new AlertsPage(driver);
     }
 
-    public FileUploadPage clickFileUpload(){
+    public WysiwygEditorPage clickWysiwygEditorLink(){
+        clickLink("WYSIWYG Editor");
+        return new WysiwygEditorPage(driver);
+    }
+
+    public FileUploadPage clickFileUploadLink(){
         clickLink("File Upload");
         return new FileUploadPage(driver);
     }

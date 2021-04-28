@@ -15,7 +15,7 @@ public class SendKeysTests extends BaseTests {
     @Test
     public void testAKey(){
 
-        keyPressesPage = homePage.clickKeyPressesPage();
+        keyPressesPage = homePage.clickKeyPressesLink();
         keyPressesPage.enterText(text);
         assertEquals(keyPressesPage.getResult(), "You entered: "+text, "Result text is incorrect");
     }
