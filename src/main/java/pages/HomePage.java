@@ -1,7 +1,7 @@
-    package pages;
+package pages;
 
-        import org.openqa.selenium.By;
-        import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
 public class HomePage {
 
@@ -44,6 +44,11 @@ public class HomePage {
     public FileUploadPage clickFileUploadLink(){
         clickLink("File Upload");
         return new FileUploadPage(driver);
+    }
+
+    public EntryAdPage clickEntryAdLink(){
+        clickLink("Entry Ad");
+        return new EntryAdPage(driver);
     }
 
     private void clickLink(String linkText){

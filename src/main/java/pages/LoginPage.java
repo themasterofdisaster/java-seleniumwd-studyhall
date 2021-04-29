@@ -1,3 +1,6 @@
+/*
+    Test page: https://the-internet.herokuapp.com/login
+ */
 package pages;
 
 import org.openqa.selenium.By;

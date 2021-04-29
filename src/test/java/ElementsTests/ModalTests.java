@@ -16,12 +16,19 @@ package ElementsTests;
 import base.BaseTests;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
+import pages.EntryAdPage;
+import pages.HomePage;
+import static org.testng.Assert.*;
 
 public class ModalTests extends BaseTests {
 
+    //Need to add a wait for this to pass. 
     @Test
-    public void closeModalTest(){
-
+    public void testModalOpens(){
+        EntryAdPage entryAdPage = homePage.clickEntryAdLink();
+        String modalTitle = entryAdPage.getModalTitle();
+        assertTrue(modalTitle.equals("THIS IS A MODAL WINDOW"),
+                "Modal title incorrect. " + "Expected 'THIS IS A MODAL WINDOW' but received '" + modalTitle + "'");
     }
 
 
