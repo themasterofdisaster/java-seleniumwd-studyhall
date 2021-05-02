@@ -11,34 +11,14 @@ public class HomePage {
         this.driver = driver;
     }
 
-    public FormAuthenticationPage clickFormAuthenticationLink(){
-        clickLink("Form Authentication");
-        return new FormAuthenticationPage(driver);
-    }
-
     public DropdownPage clickDropDownLink(){
         clickLink("Dropdown");
         return new DropdownPage(driver);
     }
 
-    public HoversPage clickHoversLink(){
-        clickLink("Hovers");
-        return new HoversPage(driver);
-    }
-
-    public KeyPressesPage clickKeyPressesLink(){
-        clickLink("Key Presses");
-        return new KeyPressesPage(driver);
-    }
-
-    public AlertsPage clickJavaScriptAlertsLink(){
-        clickLink("JavaScript Alerts");
-        return new AlertsPage(driver);
-    }
-
-    public WysiwygEditorPage clickWysiwygEditorLink(){
-        clickLink("WYSIWYG Editor");
-        return new WysiwygEditorPage(driver);
+    public EntryAdPage clickEntryAdLink(){
+        clickLink("Entry Ad");
+        return new EntryAdPage(driver);
     }
 
     public FileUploadPage clickFileUploadLink(){
@@ -46,9 +26,34 @@ public class HomePage {
         return new FileUploadPage(driver);
     }
 
-    public EntryAdPage clickEntryAdLink(){
-        clickLink("Entry Ad");
-        return new EntryAdPage(driver);
+    public FormAuthenticationPage clickFormAuthenticationLink(){
+        clickLink("Form Authentication");
+        return new FormAuthenticationPage(driver);
+    }
+
+    public HorizontalSliderPage clickHorizontalSliderLink(){
+         clickLink("Horizontal Slider");
+        return new HorizontalSliderPage(driver);
+    }
+
+    public HoversPage clickHoversLink(){
+        clickLink("Hovers");
+        return new HoversPage(driver);
+    }
+
+    public AlertsPage clickJavaScriptAlertsLink(){
+        clickLink("JavaScript Alerts");
+        return new AlertsPage(driver);
+    }
+
+    public KeyPressesPage clickKeyPressesLink(){
+        clickLink("Key Presses");
+        return new KeyPressesPage(driver);
+    }
+
+    public WysiwygEditorPage clickWysiwygEditorLink(){
+        clickLink("WYSIWYG Editor");
+        return new WysiwygEditorPage(driver);
     }
 
     private void clickLink(String linkText){
