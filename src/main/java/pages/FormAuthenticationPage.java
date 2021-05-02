@@ -6,14 +6,14 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class LoginPage {
+public class FormAuthenticationPage {
 
     private WebDriver driver;
     private By usernameField = By.id("username");
     private By passwordField = By.id("password");
     private By loginButton = By.cssSelector("#login button");
 
-    public LoginPage(WebDriver driver){
+    public FormAuthenticationPage(WebDriver driver){
         this.driver = driver;
     }
 

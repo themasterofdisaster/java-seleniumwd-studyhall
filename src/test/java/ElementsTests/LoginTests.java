@@ -2,7 +2,7 @@ package ElementsTests;
 
 import base.BaseTests;
 import org.testng.annotations.Test;
-import pages.LoginPage;
+import pages.FormAuthenticationPage;
 import pages.SecureAreaPage;
 
 import static org.testng.Assert.*;
@@ -11,7 +11,7 @@ public class LoginTests extends BaseTests {
 
     @Test
     public void testSuccessfulLogin(){
-        LoginPage loginPage = homePage.clickFormAuthenticationLink();
+        FormAuthenticationPage loginPage = homePage.clickFormAuthenticationLink();
         loginPage.setUsername("tomsmith");
         loginPage.setPassword("SuperSecretPassword!");
         SecureAreaPage secureAreaPage = loginPage.clickLoginButton();

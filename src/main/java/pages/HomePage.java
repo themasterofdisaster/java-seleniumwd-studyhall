@@ -11,9 +11,9 @@ public class HomePage {
         this.driver = driver;
     }
 
-    public LoginPage clickFormAuthenticationLink(){
+    public FormAuthenticationPage clickFormAuthenticationLink(){
         clickLink("Form Authentication");
-        return new LoginPage(driver);
+        return new FormAuthenticationPage(driver);
     }
 
     public DropdownPage clickDropDownLink(){
