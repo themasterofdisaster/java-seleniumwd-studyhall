@@ -61,6 +61,11 @@ public class HomePage {
         return new WysiwygEditorPage(driver);
     }
 
+    public NestedFramesPage goToNestedFramesPage(){
+        driver.get("https://the-internet.herokuapp.com/nested_frames");
+        return new NestedFramesPage(driver);
+    }
+
     private void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
     }
