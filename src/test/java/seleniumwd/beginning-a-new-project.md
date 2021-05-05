@@ -18,7 +18,7 @@ File -> New -> Project...
     Select "Maven" project. 
     Indicate name. 
     
-####Update the pom.xml file: 
+#### Update the pom.xml file: 
 
     <!-- Let intellij know to compile our code using the appropriate java version. -->
     <properties>
