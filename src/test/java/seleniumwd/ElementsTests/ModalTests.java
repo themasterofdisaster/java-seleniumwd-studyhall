@@ -11,13 +11,12 @@
 
  */
 
-package ElementsTests;
+package seleniumwd.ElementsTests;
 
-import base.BaseTests;
-import org.openqa.selenium.WebDriver;
+import seleniumwd.base.BaseTests;
 import org.testng.annotations.Test;
 import pages.EntryAdPage;
-import pages.HomePage;
+
 import static org.testng.Assert.*;
 
 public class ModalTests extends BaseTests {

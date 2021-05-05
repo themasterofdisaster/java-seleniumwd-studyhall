@@ -1,6 +1,6 @@
-package ElementsTests;
+package seleniumwd.ElementsTests;
 
-import base.BaseTests;
+import seleniumwd.base.BaseTests;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 import pages.KeyPressesPage;

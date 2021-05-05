@@ -1,6 +1,6 @@
-package ElementsTests;
+package seleniumwd.ElementsTests;
 
-import base.BaseTests;
+import seleniumwd.base.BaseTests;
 import org.testng.annotations.Test;
 import pages.HorizontalSliderPage;
 import static org.testng.Assert.assertEquals;
