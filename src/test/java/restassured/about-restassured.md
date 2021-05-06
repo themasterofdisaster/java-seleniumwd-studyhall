@@ -49,5 +49,12 @@ and the Content-Type, which tells us, or rather, the consumer of the API, that t
 application/json which helps the API consumer decode the response body.
 
 
+#### About RESTful APIs
+
+RESTful APIs are all about data. 
+You have HTTP GET to retrieve existing data from the server, 
+HTTP POST to create new data on the server, 
+HTTP PUT or PATCH to update existing, and
+HTTP DELETE to delete existing data from a server. 
     
     

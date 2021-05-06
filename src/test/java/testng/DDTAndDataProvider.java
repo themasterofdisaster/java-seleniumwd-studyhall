@@ -35,7 +35,7 @@ public class DDTAndDataProvider
     @Test (dataProvider = "login-provider")
     public void logIn (String email, String password, boolean success)
     {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\max\\Downloads\\Drivers\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
         driver = new ChromeDriver ();
         driver.manage().window().maximize();
 
