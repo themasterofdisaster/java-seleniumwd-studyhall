@@ -44,6 +44,7 @@ import static org.hamcrest.Matchers.*;
 
 public class ParameterizedTests {
 
+    // Step 1: Create a test data collection.
     // This will provide our parameters for the test
     @DataProvider (name="zipCodesAndPlaces")
     public Object[][] zipCodesAndPlaces(){
@@ -55,11 +56,13 @@ public class ParameterizedTests {
     }
 
     @Test (dataProvider = "zipCodesAndPlaces")
+    // Step 2: Feed data collection to test method.
     public void someTest(String countryCode, String zipCode, String expectedPlace){
 
-        given().pathParam("countryCode", countryCode).pathParam("zipCode", zipCode).
-                when().get("http://zippopotam.us/{countryCode}/{zipCode}").
-        then().assertThat().body("places[0].'place name'", equalTo(expectedPlace));
+        // Step 3: Use path parameters to parameterize REST Assured tests
+        given().pathParam("countryCode", countryCode).pathParam("zipCode", zipCode). // tell rest assured we now have to path parameters
+                when().get("http://zippopotam.us/{countryCode}/{zipCode}"). // replace the hardcoded values in the get method with the path parameters names
+        then().assertThat().body("places[0].'place name'", equalTo(expectedPlace)); //replace te hardcoded expected value with the parameter 
 
     }
 }
