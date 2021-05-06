@@ -66,6 +66,11 @@ public class HomePage {
         return new NestedFramesPage(driver);
     }
 
+    public DynamicLoadingHiddenElementPage goToDynamicLoadingHiddenElementPage(){
+        driver.get("https://the-internet.herokuapp.com/dynamic_loading/1");
+        return new DynamicLoadingHiddenElementPage(driver);
+    }
+
     private void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
     }
