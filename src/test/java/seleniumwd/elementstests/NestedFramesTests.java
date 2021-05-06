@@ -1,4 +1,4 @@
-package seleniumwd.ElementsTests;
+package seleniumwd.elementstests;
 
 import seleniumwd.base.BaseTests;
 import org.testng.annotations.Test;

@@ -6,7 +6,7 @@
 
         Test page: https://the-internet.herokuapp.com/context_menu
 */
-package seleniumwd.ElementsTests;
+package seleniumwd.elementstests;
 
 import seleniumwd.base.BaseTests;
 import org.testng.annotations.Test;

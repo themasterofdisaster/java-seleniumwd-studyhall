@@ -32,7 +32,7 @@
 
  */
 
-package seleniumwd.ElementsTests;
+package seleniumwd.elementstests;
 
 import org.testng.annotations.Test;
 import pages.DynamicLoadingHiddenElementPage;
