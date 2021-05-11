@@ -66,9 +66,14 @@ public class HomePage {
         return new NestedFramesPage(driver);
     }
 
-    public DynamicLoadingHiddenElementPage goToDynamicLoadingHiddenElementPage(){
+    public DynamicLoadHiddenElementPage goToDynamicLoadingHiddenElementPage(){
         driver.get("https://the-internet.herokuapp.com/dynamic_loading/1");
-        return new DynamicLoadingHiddenElementPage(driver);
+        return new DynamicLoadHiddenElementPage(driver);
+    }
+
+    public DynamicLoadRenderedElementPage goToDynamicLoadRenderedElementPage(){
+        driver.get("https://the-internet.herokuapp.com/dynamic_loading/2");
+        return new DynamicLoadRenderedElementPage(driver);
     }
 
     private void clickLink(String linkText){

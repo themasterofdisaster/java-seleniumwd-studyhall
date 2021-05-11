@@ -9,14 +9,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class DynamicLoadingHiddenElementPage {
+public class DynamicLoadHiddenElementPage {
 
     WebDriver driver;
     By startButton = By.cssSelector("#start button");
     By loadingIndicator = By.id("loading");
     By loadedText = By.id("finish");
 
-    public DynamicLoadingHiddenElementPage(WebDriver driver){
+    public DynamicLoadHiddenElementPage(WebDriver driver){
         this.driver = driver;
     }
 

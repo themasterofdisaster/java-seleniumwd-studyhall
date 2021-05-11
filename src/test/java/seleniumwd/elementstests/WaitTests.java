@@ -35,7 +35,8 @@
 package seleniumwd.elementstests;
 
 import org.testng.annotations.Test;
-import pages.DynamicLoadingHiddenElementPage;
+import pages.DynamicLoadRenderedElementPage;
+import pages.DynamicLoadHiddenElementPage;
 import seleniumwd.base.BaseTests;
 
 import static org.testng.Assert.*;
@@ -44,16 +45,23 @@ public class WaitTests extends BaseTests {
 
     @Test
     public void explicitWaitTest(){
-        DynamicLoadingHiddenElementPage loadingPage = homePage.goToDynamicLoadingHiddenElementPage();
+        DynamicLoadHiddenElementPage loadingPage = homePage.goToDynamicLoadingHiddenElementPage();
         loadingPage.clickStartButtonExplicitWait(); // this method implements an explicit wait.
         assertEquals(loadingPage.getLoadedTest(), "Hello World!", "Loaded text is incorrect");
     }
 
     @Test
     public void fluentWaitTest(){
-        DynamicLoadingHiddenElementPage loadingPage = homePage.goToDynamicLoadingHiddenElementPage();
+        DynamicLoadHiddenElementPage loadingPage = homePage.goToDynamicLoadingHiddenElementPage();
         loadingPage.clickStartButtonFluentWait(); // this method implements a fluent wait.
         assertEquals(loadingPage.getLoadedTest(), "Hello World!", "Loaded text is incorrect");
+    }
+
+    @Test
+    public void waitUntilElementIsRenderedTest(){
+        DynamicLoadRenderedElementPage loadRenderedElementPage = homePage.goToDynamicLoadRenderedElementPage();
+        loadRenderedElementPage.clickStartButton();
+        assertEquals(loadRenderedElementPage.getLoadedText(), "Hello World!", "Loaded text is incorrect");
     }
 
 }
