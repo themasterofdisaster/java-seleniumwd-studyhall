@@ -30,6 +30,17 @@
 
             Frequency: Setting up a repeat cycle with the time frame to verify/check the condition at the regular interval of time
 
+
+        Other Waits
+
+            Under driver.Manage.timeouts find:
+
+            pageLoadTimeout
+                Allows you to set the amount of time to wait for a page load to complete before it throws an error.
+
+            setScriptTimeout
+                Allows you to set the amount of time to wait for asynchronous scripts to finish executing.
+
  */
 
 package seleniumwd.elementstests;
