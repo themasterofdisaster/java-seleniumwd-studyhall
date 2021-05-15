@@ -51,9 +51,19 @@ public class HomePage {
         return new AlertsPage(driver);
     }
 
+    public InfiniteScrollPage clickInfiniteScroll(){
+        clickLink("Infinite Scroll");
+        return new InfiniteScrollPage(driver);
+    }
+
     public KeyPressesPage clickKeyPressesLink(){
         clickLink("Key Presses");
         return new KeyPressesPage(driver);
+    }
+
+    public LargeAndDeepDomPage clickLargeAndDeepDom(){
+        clickLink("Large & Deep DOM");
+        return new LargeAndDeepDomPage(driver);
     }
 
     public WysiwygEditorPage clickWysiwygEditorLink(){
