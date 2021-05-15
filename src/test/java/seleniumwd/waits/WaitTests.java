@@ -3,17 +3,7 @@
 
         Implicit Wait
 
-            The Implicit Wait in Selenium is used to tell the web driver to wait for a certain amount of time before it
-            throws a "No Such Element Exception". This indicates that any time WebDriver needs to interact with an element,
-            then it should poll the website for up to 30 seconds until it finds that element.
-
-            The default setting is 0. Once we set the time, the web driver will wait for the element for that time
-            before throwing an exception.
-
-            You can see this applied in BaseTests.java in the @BeforeClass, called SetUp (it is commented out). It is
-            set up as follows:
-
-            driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+            See ImplicitWaitTest.java
 
         Explicit Wait
 
@@ -43,7 +33,7 @@
 
  */
 
-package seleniumwd.elementstests;
+package seleniumwd.waits;
 
 import org.testng.annotations.Test;
 import pages.DynamicLoadRenderedElementPage;
