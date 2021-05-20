@@ -13,4 +13,10 @@ public class NavigationTests extends BaseTests {
         getWindowManager().goForward();
         getWindowManager().goTo("https://duckduckgo.com/");
     }
+
+    @Test
+    public void testSwitchTab(){
+        homePage.clickMultipleWindowsLink().clickClickHereLink();
+        getWindowManager().switchToTab("New Window");
+    }
 }

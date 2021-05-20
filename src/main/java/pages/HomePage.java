@@ -66,6 +66,11 @@ public class HomePage {
         return new LargeAndDeepDomPage(driver);
     }
 
+    public MultipleWindowsPage clickMultipleWindowsLink(){
+        clickLink("Multiple Windows");
+        return new MultipleWindowsPage(driver);
+    }
+
     public WysiwygEditorPage clickWysiwygEditorLink(){
         clickLink("WYSIWYG Editor");
         return new WysiwygEditorPage(driver);
