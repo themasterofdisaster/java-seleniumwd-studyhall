@@ -1,10 +1,12 @@
 package seleniumwd.base;
 
 import com.google.common.io.Files;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
@@ -25,11 +27,13 @@ public class BaseTests {
     @BeforeClass
     public void setUp(){
         System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
-        driver = new ChromeDriver();
+        //driver = new ChromeDriver();  //driver with no chrome options
+        driver = new ChromeDriver(getChromeOptions());  //driver with chrome options
         driver.get("https://the-internet.herokuapp.com/");
         // Implicit wait:
         //driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         homePage = new HomePage(driver);
+        setCookie();
     }
 
     /*
@@ -85,5 +89,29 @@ public class BaseTests {
 
     public WindowManager getWindowManager(){
         return new WindowManager(driver);
+    }
+
+    // Use ChromeOptions to make modifications to the browser which will open to run the automated tests.
+    private ChromeOptions getChromeOptions(){
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("disable-infobars");
+
+        //Headless mode will run the tests without opening the browser. These typically run a little bit faster.
+        //The downside is you don't get to see the actual browser while running the test:
+        //options.setHeadless(true);
+        return options;
+    }
+
+    //Cookie.Builder will allow us to manipulate cookies. You can delete a cookie, all cookies, cookie with a specific name. Etc.
+    // The following method will create and set a cookie "tau" with value "123":
+    private void setCookie(){
+
+        //Creates the cookie
+        Cookie cookie = new Cookie.Builder("tau", "123")
+                .domain("the-internet.herokuapp.com")
+                .build();
+
+        //Sets the cookie
+        driver.manage().addCookie(cookie);
     }
 }
