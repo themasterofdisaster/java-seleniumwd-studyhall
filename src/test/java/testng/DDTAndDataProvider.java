@@ -37,7 +37,7 @@ public class DDTAndDataProvider
     {
         System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
         driver = new ChromeDriver ();
-        driver.manage().window().maximize();
+        //driver.manage().window().maximize();
 
         driver.get("http://automationpractice.com/index.php");
         driver.findElement(By.xpath("//*[@id=\"header\"]/div[2]/div/div/nav/div[1]/a")).click();
