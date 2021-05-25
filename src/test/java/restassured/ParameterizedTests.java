@@ -60,7 +60,7 @@ public class ParameterizedTests {
     public void someTest(String countryCode, String zipCode, String expectedPlace){
 
         // Step 3: Use path parameters to parameterize REST Assured tests
-        given().pathParam("countryCode", countryCode).pathParam("zipCode", zipCode). // tell rest assured we now have to path parameters
+        given().pathParam("countryCode", countryCode).pathParam("zipCode", zipCode). // tell rest assured we now have two path parameters
                 when().get("http://zippopotam.us/{countryCode}/{zipCode}"). // replace the hardcoded values in the get method with the path parameters names
         then().assertThat().body("places[0].'place name'", equalTo(expectedPlace)); //replace te hardcoded expected value with the parameter 
 
